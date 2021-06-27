@@ -1,0 +1,54 @@
+/*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:07-05-21
+Topic:Recursion_Array_String
+Language Used: C
+##########################
+ Accept a number from the user and find the factorial of the number using recursion.   
+*/
+#include<stdio.h>
+int multiply(int n);
+int main() 
+{
+    int num,fact=1;
+    printf("Enter a positive integer: ");
+    scanf("%d",&num);
+    if(num>0)
+    {
+    fact =multiply(num);
+    printf("\nFactorial of %d is %d", num,fact);
+    }
+    else if(num==0)
+    printf("\n\nFactorial of %d is %d", num,fact);
+    else if(num<0)
+    printf("\nInvalid input");
+    return 0;
+    
+}
+
+
+/*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:07-05-21
+Topic:Recursion_Array_String
+Language Used: C
+##########################
+ Accept a sentence from the user and count number of words.   
+*/
+#include<stdio.h>
+int main(void)
+{
+    char str[50];
+    int count=1,i;
+    printf("Enter the string  :");
+    scanf("%[^\n]s",str);
+    for(i=0;str[i]!='\0';i++)
+    {
+        if(str[i]==' '&& str[i+1]!=' ')
+        count++;
+    }
+    printf("\nNumber of words in string : %d",count);
+return 0;
+}

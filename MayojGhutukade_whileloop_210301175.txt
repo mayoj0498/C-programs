@@ -1,0 +1,235 @@
+/*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:03-05-21
+Topic:while loop
+Language Used: C
+##########################
+Given that the rate of pens is Rs. 20/- each and pencil is Rs. 5/- each. Accept from the user the quantity
+purchased of each of them and calculate and print the amount to be paid to the shopkeeper.
+*/
+#include<stdio.h>
+int main(void)
+{
+    int pen,pencil,count=0,sum=0;
+    printf("please enter quantity of pens :");
+    scanf("%d",&pen);
+    printf("please enter quantity of pencils :");
+    scanf("%d",&pencil);
+    if(pen>0)
+    {
+    while(count!=pen)
+    {
+       sum+=20 ;
+       count++;
+    }
+    printf("\nAmunt of pen : %d rs",sum);
+    }
+    sum=0;
+    count=0;
+    if(pencil>0)
+    {
+    while(count!=pencil)
+    {
+       sum+=5 ;
+       count++;
+    }
+    printf("\nAmunt of pencil : %d rs",sum);
+    }
+
+    return 0;
+}
+
+/*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:03-05-21
+Topic:while loop
+Language Used: C
+##########################
+To calculate and print the commission earned by a salesman based on criteria given
+If sales <= Rs. 5000 commission rate =10% of sales
+Otherwise commission rate = 20% of sales
+*/
+#include<stdio.h>
+int main(void)
+{
+    float sale,comm;
+    printf("please enter sales :");
+    scanf("%f",&sale);
+    while(sale>0)
+    {
+        if(sale<=5000)
+        {
+            comm=sale*0.1;
+            printf("\ncommission earned : %.2f rs",comm);
+        }
+        else
+        {
+          comm=sale*0.2;
+          printf("\ncommission earned : %.2f rs",comm);
+        }  
+        break;
+        
+    }
+    return 0;
+}
+
+/*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:03-05-21
+Topic:while loop
+Language Used: C
+##########################
+Write an infinite loop. An infinite loop never ends. Condition is always true.
+*/
+#include<stdio.h>
+int main(void)
+{
+    while(1)
+    {
+        printf("\nInfinite loop");
+    }
+    return 0;
+}
+
+/*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:03-05-21
+Topic:while loop
+Language Used: C
+##########################
+Take integer inputs from user until he/she presses q ( Ask to press q to quit, after every integer input ).
+Print average and product of all numbers.
+*/
+#include<stdio.h>
+int main(void)
+{
+    int num,sum=0,count=0,product=1,check=0;
+    char ch;
+    float avg;
+    while(1)
+    {
+    printf("\nplease enter number :");
+    scanf("%d",&num);
+    sum += num;
+    product*=num;
+    count++;
+    printf("\nEnter q to quit else press any key to continue :");
+    scanf("%*c");
+    scanf("%c",&ch);
+    if(ch=='q')
+    break;
+    }
+    avg= (float)sum/count;
+    printf("\nAverage:%.2f   product:%d",avg,product);
+
+    return 0;
+}
+*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:03-05-21
+Topic:while loop
+Language Used: C
+##########################
+Print multiplication table of 8, 17 and 27 using while loop.
+*/
+#include<stdio.h>
+int main(void)
+{
+    int num1=8,num2=17,num3=27,i=1,res;
+    printf("multiplication table of %d\n",num1);
+    while(i<11)
+    {
+        res=num1*i;
+        printf("%3d * %3d = %3d",num1,i,res);
+        printf("\n");
+        i++;
+    }
+    i=1;
+    printf("multiplication table of %d\n",num2);
+    while(i<11)
+    {
+        res=num2*i;
+        printf("%3d * %3d = %3d",num1,i,res);
+        printf("\n");
+        i++;
+    }
+    i=1;
+       printf("multiplication table of %d\n",num3);
+    while(i<11)
+    {
+        res=num3*i;
+        printf("%3d * %3d = %3d",num3,i,res);
+        printf("\n");
+        i++;
+    }
+
+return 0;
+
+}
+
+/*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:03-05-21
+Topic:while loop
+Language Used: C
+##########################
+Write a program to print a number given by user but digits reversed. E.g.-
+INPUT : 123 OUTPUT : 321
+INPUT : 12345 OUTPUT : 54321
+*/
+#include<stdio.h>
+int main(void)
+{
+    int num,rem,sum=0 ;
+    printf("please enter a number :");
+    scanf("%d",&num);
+    while(num>0)
+    {
+        rem=num%10;
+        sum=sum*10+rem;
+        num=num/10;
+
+    }
+    printf("\n Reverse: %d",sum);
+    return 0;
+}
+/*
+#########################
+Author:Mayoj Ghutukade
+Date of creation:03-05-21
+Topic:while loop
+Language Used: C
+##########################
+Write a program to print all prime number in between 55 to 249 
+*/
+#include<stdio.h>
+int main(void)
+{
+    int i,num=55,count;
+    printf("prime number from 55 to 249 :\n ");
+    while(num<=249)
+    {
+        count=0;
+        i=2;
+        while(i<=num/2)
+        {
+            if(num%i==0)
+            {
+                count++;
+                break;
+            }
+            i++;
+        }
+        if(count==0)
+        printf(" %d ",num);
+        num++;
+    }
+    
+    return 0;
+}
