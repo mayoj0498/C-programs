@@ -1,0 +1,28 @@
+
+
+C programming   [ Procedure Oriented Approch ]
+
+int counter=0; 		// global variables
+void add()
+{
+	int a=10;      // local variable
+	code
+}
+void modify()
+{
+	int c=20;	 // local variable
+	code
+}
+void delete()
+{
+	int d=30;	 // local variable
+	code
+}
+
+void main()
+{
+	menu driven code
+		add();
+		modify();
+		delete();
+}
